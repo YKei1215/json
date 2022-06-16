@@ -6,7 +6,12 @@ window.onload　=　function() {
   
 }
 function savejson() {
-  
+  var txt = document.getElementById("dat2").value;
+  if (txt != ""){
+    var jsonData = '{"name": txt}';
+    var jsonObject = JSON.parse(jsonData);
+    console.log(jsonObject.name);
+  }
 }
 </script>
 <div id="dat"></div><br>
