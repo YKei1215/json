@@ -2,13 +2,11 @@
 <title>sample</title>
 <script type="text/javascript"><!--
 window.onload　=　function() {
+  
 }
 function savejson() {
   var txt = document.getElementById("dat1").value;
   if (txt != ""){
-    var jsonData = '{"name": txt}';
-    var jsonObject = JSON.parse(jsonData);
-    console.log(jsonObject.name);
     location.reload()
   }
 }
