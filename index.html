@@ -6,14 +6,15 @@ window.onload　=　function() {
   
 }
 function savejson() {
-  var txt = document.getElementById("dat2").value;
+  var txt = document.getElementById("dat1").value;
   if (txt != ""){
     var jsonData = '{"name": txt}';
     var jsonObject = JSON.parse(jsonData);
     console.log(jsonObject.name);
+    location.reload();
   }
 }
 </script>
-<div id="dat"></div><br>
+<div id="dat1"></div><br>
 <input type="text" id="dat1" placeholder="コメントを入力してください">
 <input type="button" value="投稿" onclick="savejson()"><br>
