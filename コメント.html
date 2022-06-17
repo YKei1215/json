@@ -5,7 +5,9 @@ d3.csv("https://docs.google.com/spreadsheets/d/13b9clXrPUAACBF80smJU-bfaIystddhd
   var text = "";
     for(var i=1; i<data.length; i++){
       if(data[i]Name != ""){
-      text += i + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";  
+        text += i + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";  
+      }else{
+        text += i + " 名前:" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
       }
     }
   d3.select("#comments").html(text);
