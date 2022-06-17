@@ -4,7 +4,7 @@
 d3.csv("https://docs.google.com/spreadsheets/d/13b9clXrPUAACBF80smJU-bfaIystddhd0Bd0HxDg1Yg/export?format=csv&range=A3:D", function(error, data){
   var text = "";
     for(var i=1; i<data.length; i++){
-      if(data[i]Name != ""){
+      if(data[i].Name != ""){
         text += i + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";  
       }else{
         text += i + " 名前:" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
