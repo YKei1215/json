@@ -3,12 +3,11 @@
 <script>
 d3.csv("https://docs.google.com/spreadsheets/d/13b9clXrPUAACBF80smJU-bfaIystddhd0Bd0HxDg1Yg/export?format=csv&range=A3:D", function(error, data){
   var text = "";
-    for(var i=0; i<data.length; i++){
-      a=i+1
-      if(data[a].Mail != ""){
-	 text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
+    for(var i=1; i<data.length; i++){
+      if(data[i].Mail != ""){
+	 text += i + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
       }else{      
-         text += i+1 + " 名前: "<pre>" + data[i].Name + "</pre>" + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
+         text += i + " 名前: "<pre>" + data[i].Name + "</pre>" + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
       }
     }
   d3.select("#comments").html(text);
